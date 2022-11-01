@@ -114,6 +114,13 @@ h1.title::before {
     background-repeat: no-repeat;
 } 
 
+.cite-header__link {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 16px;
+}
+
 .button__burger {
     background-image: url("background/ic/burger.svg");
     background-position: center;

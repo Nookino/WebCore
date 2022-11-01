@@ -5,17 +5,19 @@
     top: 40px;
     right: 34px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     width: auto;
-   
+    column-gap: 20px;
 }
+
 .cite-header__logo {
     display: none;
 }
 .cite-header__button.button__burger {
     display: none;
 }
+
 .cite-header__divider {
     display: none;
 }

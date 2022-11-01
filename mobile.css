@@ -18,7 +18,8 @@
 .cite-header__logo {
     margin-right: auto;
 }
-.cite-header__button {
+.cite-header__button, .cite-header__link 
+{
     margin-right: 16px;
 }
 .cite-header :last-child {
@@ -28,7 +29,7 @@
     display: none;
 }
 .pc-visible {
-    visibility: hidden;
+    display: none;
 }
 
 /* заголовок h1*/
