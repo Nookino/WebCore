@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url("Fonts/TTLakes/TTLakes-Regular.eot");
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url("Fonts/TTLakes/TTLakes-Regular.eot") format('embedded-opentype'),
+        url('Fonts/TTLakes/TTLakes-Regular.woff') format('woff'),
+        url('Fonts/TTLakes/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Lakes';
+    src: url("Fonts/TTLakes/TTLakes-Bold.eot");
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url("Fonts/TTLakes/TTLakes-Bold.eot") format('embedded-opentype'),
+        url('Fonts/TTLakes/TTLakes-Bold.woff') format('woff'),
+        url('Fonts/TTLakes/TTLakes-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Lakes';
+    src: url("Fonts/TTLakes/TTLakes-DemiBold.eot");
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url("Fonts/TTLakes/TTLakes-DemiBold.eot") format('embedded-opentype'),
+        url('Fonts/TTLakes/TTLakes-DemiBold.woff') format('woff'),
+        url('Fonts/TTLakes/TTLakes-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Lakes';
+    src: url("Fonts/TTLakes/TTLakes-Light.eot");
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url("Fonts/TTLakes/TTLakes-Light.eot") format('embedded-opentype'),
+        url('Fonts/TTLakes/TTLakes-Light.woff') format('woff'),
+        url('Fonts/TTLakes/TTLakes-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8;
+
+    font-family: 'TT Lakes', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    max-width: 1200px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+li {
+    margin: 0;
+}
+button {
+margin: 0;
+}
+p {
+    margin: 0;
+}
+
+/* шрифты */
+/* Заголовок h1*/
+h1.title {
+    font-family: 'TT Lakes', Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    vertical-align: center;
+    padding-left: 16px;
+}
+h1.title::before {
+    content: url("background/highlight.svg");
+    position: absolute;
+    left: 0;
+}
+
+/* Текст кнопок */
+.button__title {
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+
+/* текст */
+.text {
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+    margin-bottom: 12px;
+    }
+
+
+/* кнопки шапки, описание иконок */
+
+.cite-header__button {
+    background-color: #ff3e79;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-repeat: no-repeat;
+} 
+
+.button__burger {
+    background-image: url("background/ic/burger.svg");
+    background-position: center;
+}
+.button__call {
+    background-image: url("background/ic/call.svg");
+    background-position: center;
+
+}
+.button__chat {
+    background-image: url("background/ic/chat.svg");
+    background-position: center;
+}
+.button__profile {
+    background-image: url("background/ic/profile.svg");
+    background-position: center;
+}
+.button__repair {
+    background-image: url("background/ic/repair.svg");
+    background-position: center;
+}
+
+.button__checkstatus {
+    background-image: url("background/ic/checkstatus.svg");
+    background-position: center;
+}
+
+
+/* разделитель шапки */
+.cite-header__divider {
+    width: 2px;
+    height: 32px;
+    border-radius: 1px;
+    margin-left: 16px;
+    margin-right: 16px;
+    background-color: #eaeaea;
+} 
+
+/* кнопка "читать далее" */
+.more__button {
+    background-color: #F8F8F8;
+    border: 0;
+    align-items: center;
+}
+.more__button-ic {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("background/more.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+/* описание картинки раздела "о компании" */
+.info__image img {
+    object-fit: cover;
+}

@@ -1,0 +1,93 @@
+
+/* общее описание шапки */
+
+.cite-header {
+    border-bottom: 1px solid #d9fff5;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 16px;
+    padding-left: 16px;
+    width: auto;
+    min-width: 320px;
+}
+.cite-header__logo {
+    margin-right: auto;
+}
+.cite-header__button {
+    margin-right: 16px;
+}
+.cite-header :last-child {
+    margin-right: 0;
+}
+.cite-header :first-child {
+    margin-right: 0;
+}
+.cite-header .button__profile {
+    margin-right: 0;
+}
+.pc-visible {
+    display: none;
+}
+
+/* навигация */
+
+.main__navigation-list {
+    display: flex;
+    justify-content: start;
+    margin: 0 16px;
+    flex-wrap: wrap;
+}
+.main__navigation-list::-webkit-scrollbar {
+    display: none;
+}
+
+.main__navigation-list a {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+    color: #7E7E82;
+    padding: 8px 16px;
+
+    display: block;
+    margin-right: 16px;
+    margin-left: 0;
+}
+.main__navigation-list a:last-child {
+    margin-right: 0;
+}
+.navigation-list__active {
+    background: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+
+/* Блок о компании */
+
+div.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 12px;
+    gap: 16px;
+}
+.info__text {
+    min-width: 312px;
+    max-width: 490px;
+}
+.info__image {
+    width: 360;
+    height: 208px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
