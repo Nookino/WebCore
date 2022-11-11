@@ -49,6 +49,7 @@ body {
     line-height: 18px;
     font-weight: normal;
     max-width: 1200px;
+
 }
 ul {
     margin: 0;
@@ -59,10 +60,14 @@ li {
     margin: 0;
 }
 button {
-margin: 0;
+    margin: 0;
 }
 p {
     margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #1B1C21;
 }
 
 /* шрифты */
@@ -112,6 +117,12 @@ h1.title::before {
     border-radius: 50%;
     border: none;
     background-repeat: no-repeat;
+    opacity: 1;
+    transition-duration: 500ms;
+} 
+
+.cite-header__button:hover {
+    opacity: 0.5;
 } 
 
 .cite-header__link {
@@ -148,6 +159,16 @@ h1.title::before {
     background-position: center;
 }
 
+.button__menu-exit {
+    background-image: url("background/ic/exit.svg");
+    background-position: center;
+}
+
+.button__search {
+    background-image: url("background/ic/search.svg");
+    background-position: center;
+}
+
 
 /* разделитель шапки */
 .cite-header__divider {
@@ -177,4 +198,89 @@ h1.title::before {
 /* описание картинки раздела "о компании" */
 .info__image img {
     object-fit: cover;
+}
+
+/* Развернутое меню */
+
+.cite-header--deployed {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    width: 320px;
+    min-height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+    
+.cite-header__header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+ 
+.cite-header--deployed a {
+    display: block;
+    padding: 16px 24px 16px 24px;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.2px;
+}
+
+.cite-header--deployed li.selected {
+    position: relative;
+}
+
+.cite-header--deployed li.selected a {
+    color: #7E7E82;
+}
+
+
+.cite-header--deployed .cite-header__mobile-list li.selected::before {
+    content: url("background/highlight.svg");
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+.cite-header--deployed .cite-header__contacts {
+    margin-top: auto;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding: 0;
+
+}
+
+.cite-header--deployed .cite-header__language a {
+    padding: 0;
+    padding-top: 20px;
+    margin-left: 24px;
+}
+
+.cite-header--deployed a.mail-link {
+    margin: 0;
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 0;
+}
+
+.cite-header--deployed a.telephone-link {
+margin: 0;
+font-size: 24px;
+line-height: 32px;
+letter-spacing: -0.6px;
+padding-top: 16px;
+padding-left: 24px;
+padding-right: 24px;
+padding-bottom: 20px;
 }

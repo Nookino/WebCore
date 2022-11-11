@@ -22,7 +22,8 @@
 {
     margin-right: 16px;
 }
-.cite-header :last-child {
+.cite-header :last-child, 
+.cite-header__top :last-child {
     margin-right: 0;
 }
 .tablet-visible {
@@ -95,3 +96,6 @@ div.info {
     align-items: center;
 }
 
+.cite-header__language {
+    display: flex;
+}
