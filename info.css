@@ -1,0 +1,77 @@
+/* Блок о компании */
+
+@media (max-width: 767px) {
+
+    div.info {
+        display: flex;
+        flex-direction: column;
+    }
+    .info__text {
+        margin: 12px 16px;
+        width: auto;
+        min-width: 320px;
+        max-width: 490px;
+    }
+    .info__image {
+        margin-top: 12px;
+        width: auto;
+        height: 180px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    div.info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 12px;
+        gap: 16px;
+    }
+    .info__text {
+        min-width: 312px;
+        max-width: 490px;
+    }
+    .info__image {
+        width: 360;
+        height: 208px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    div.info {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 34px;
+        align-items: flex-start;
+    }
+    .info__text {
+        width: auto;
+        min-width: 320px;
+        max-width: 490px;
+    }
+    .info__image {
+        
+        width: 530;
+        height: 307px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* описание картинки раздела "о компании" */
+.info__image img {
+    object-fit: cover;
+}

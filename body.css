@@ -38,7 +38,7 @@
     font-weight: 300;
     font-style: normal;
 }
-
+/* обнуление */
 body {
     margin: 0;
     padding: 0;
@@ -70,8 +70,81 @@ a {
     color: #1B1C21;
 }
 
+/* видимость блоков или элементов */
+.hidden {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .tablet-visible {
+        display: none;
+    }
+    .pc-visible {
+        display: none;
+    }
+    .pc-tablet-visible {
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .mobile-visible {
+        display: none;
+    }
+    .pc-visible {
+        display: none;
+    }
+}
+@media (min-width: 1200px) {
+    .mobile-visible {
+        display: none;
+    }
+    .tablet-visible {
+        display: none;
+    }
+    
+}
+
+/* стандартные отступы */
+
+
+@media (max-width: 767px) {
+    .container {
+        margin: 12px 16px;
+    }
+    .main__title {
+        margin-top: 12px;
+        margin-bottom: 24px;
+    }
+    h2.title {
+        padding: 16px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .container {
+        margin: 12px 16px;
+    }
+    h2.title {
+        padding: 16px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        margin: 12px 34px;
+    }
+    .main__title {
+        margin-top: 40px;
+        margin-bottom: 24px;
+    }
+    h2.title {
+        padding: 16px 34px;
+    }
+    
+}
+
 /* шрифты */
 /* Заголовок h1*/
+
+
 h1.title {
     font-family: 'TT Lakes', Arial, Helvetica, sans-serif;
     font-size: 28px;
@@ -85,6 +158,18 @@ h1.title::before {
     content: url("background/highlight.svg");
     position: absolute;
     left: 0;
+}
+
+
+
+h2.title {
+display: block;
+font-family: 'TT Lakes', Arial, Helvetica, sans-serif;
+line-height: 150%;
+font-weight: normal;
+color: #7e7e82;
+background: linear-gradient(to right, #FFFFFF, #F8F8F8);
+border-top: 1px solid #D9FFF5;
 }
 
 /* Текст кнопок */
@@ -107,10 +192,9 @@ h1.title::before {
     margin-bottom: 12px;
     }
 
+/* кнопочки */
 
-/* кнопки шапки, описание иконок */
-
-.cite-header__button {
+.site-header__button {
     background-color: #ff3e79;
     width: 40px;
     height: 40px;
@@ -121,17 +205,18 @@ h1.title::before {
     transition-duration: 500ms;
 } 
 
-.cite-header__button:hover {
+.site-header__button:hover {
     opacity: 0.5;
 } 
 
-.cite-header__link {
+.site-header__link {
     display: flex;
     justify-content: start;
     align-items: center;
     column-gap: 16px;
 }
 
+/* иконки кнопок */
 .button__burger {
     background-image: url("background/ic/burger.svg");
     background-position: center;
@@ -139,7 +224,6 @@ h1.title::before {
 .button__call {
     background-image: url("background/ic/call.svg");
     background-position: center;
-
 }
 .button__chat {
     background-image: url("background/ic/chat.svg");
@@ -170,117 +254,50 @@ h1.title::before {
 }
 
 
-/* разделитель шапки */
-.cite-header__divider {
-    width: 2px;
-    height: 32px;
-    border-radius: 1px;
-    margin-left: 16px;
-    margin-right: 16px;
-    background-color: #eaeaea;
-} 
-
 /* кнопка "читать далее" */
 .more__button {
+    display: block;
+    position: relative;
     background-color: #F8F8F8;
     border: 0;
     align-items: center;
+    padding-left: 24px;
+
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
 }
-.more__button-ic {
-    display: inline-block;
+
+.more__button--show::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 0;
+    content: "";
     width: 24px;
     height: 24px;
     background-image: url("background/more.svg");
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
 }
 
-/* описание картинки раздела "о компании" */
-.info__image img {
-    object-fit: cover;
-}
-
-/* Развернутое меню */
-
-.cite-header--deployed {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0;
-    padding-top: 24px;
-    padding-bottom: 32px;
-    width: 320px;
-    min-height: 100vh;
-    background-color: white;
-    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-}
-    
-.cite-header__header {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin-left: 24px;
-    margin-right: 24px;
-    margin-bottom: 16px;
-    padding: 0;
-}
-
- 
-.cite-header--deployed a {
-    display: block;
-    padding: 16px 24px 16px 24px;
-    font-family: 'TT Lakes';
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: -0.2px;
-}
-
-.cite-header--deployed li.selected {
-    position: relative;
-}
-
-.cite-header--deployed li.selected a {
-    color: #7E7E82;
-}
-
-
-.cite-header--deployed .cite-header__mobile-list li.selected::before {
-    content: url("background/highlight.svg");
+.more__button--hide::before {
     position: absolute;
-    left: 0;
-    top: 8px;
-}
-
-.cite-header--deployed .cite-header__contacts {
+    top: 0;
+    bottom: 0;
     margin-top: auto;
-    margin-left: 24px;
-    margin-right: 24px;
-    padding: 0;
-
-}
-
-.cite-header--deployed .cite-header__language a {
-    padding: 0;
-    padding-top: 20px;
-    margin-left: 24px;
-}
-
-.cite-header--deployed a.mail-link {
-    margin: 0;
-    padding-top: 16px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 0;
-}
-
-.cite-header--deployed a.telephone-link {
-margin: 0;
-font-size: 24px;
-line-height: 32px;
-letter-spacing: -0.6px;
-padding-top: 16px;
-padding-left: 24px;
-padding-right: 24px;
-padding-bottom: 20px;
+    margin-bottom: auto;
+    left: 0;
+    content: "";
+    width: 24px;
+    height: 24px;
+    rotate: 180deg;
+    background-image: url("background/more.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }

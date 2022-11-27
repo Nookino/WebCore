@@ -1,0 +1,85 @@
+/* карточка бренда */
+
+a.brandsList__item {
+    display: block;
+    position: relative;
+    height: 72px;
+    min-width: 240px;
+    max-width: 300px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+}
+a.brandsList__item.hidden {
+    display: none;
+}
+
+a.brandsList__item::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 16px;
+    top: 0;
+    bottom: 0;
+    
+    background: white url(background/go.svg) no-repeat center;
+}
+
+a.brandsList__item img {
+    position: absolute;
+    max-height: 40px;
+    max-width: 130px;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+}
+
+/* Слайдер */
+.swiper-wrapper {
+    padding-bottom: 40px;
+}
+
+.swiper-pagination {
+    bottom: -20px;
+}
+.swiper-pagination-bullet {
+    background-color: #DDDDDD;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #B5B6BC !important;
+  }
+
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .brandsList {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 0 0;
+        justify-content: start;
+        column-gap: 16px;
+        row-gap: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .brandsList {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 0 0;
+        justify-content: start;
+        column-gap: 16px;
+        row-gap: 16px;
+    }
+    
+    li a.brandsList__item {
+    width: 260px;
+    }
+}

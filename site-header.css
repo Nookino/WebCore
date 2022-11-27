@@ -1,0 +1,123 @@
+/* общее описание шапки */
+
+@media (max-width: 767px) {
+    .site-header {
+        border-bottom: 1px solid #d9fff5;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-right: 16px;
+        padding-left: 16px;
+        width: auto;
+        min-width: 320px;
+        margin-bottom: 24px;
+    }
+    .site-header__logo {
+        margin-right: auto;
+    }
+    .site-header__button, .site-header__link
+    {
+        margin-right: 16px;
+    }
+    .site-header :last-child, 
+    .site-header__top :last-child {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .site-header {
+        border-bottom: 1px solid #d9fff5;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-right: 16px;
+        padding-left: 16px;
+        width: auto;
+        min-width: 320px;
+    }
+    .site-header__logo {
+        margin-right: auto;
+    }
+    .site-header__button, .site-header__link  
+    {
+        margin-right: 16px;
+    }
+    .site-header :last-child {
+        margin-right: 0;
+    }
+    .site-header :first-child {
+        margin-right: 0;
+    }
+    .site-header .button__profile {
+        margin-right: 0;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .site-header {
+        position: absolute;
+        top: 40px;
+        right: 34px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        column-gap: 20px;
+    }
+    
+    .site-header__logo {
+        display: none;
+    }
+    .site-header__button.button__burger {
+        display: none;
+    }
+    
+    .site-header__divider {
+        display: none;
+    }
+ 
+
+    /* разворот кнопок для больших экранов */
+
+    .button__repair {
+        margin-left: 150px;
+        position: relative;
+    }
+    .button__checkstatus {
+        position: relative;
+        margin-left: 140px;
+
+    }
+
+    .button__repair::before {
+        content: 'Оставить заявку';
+        position: absolute;
+        top: 8px;
+        left: -140px;
+    }
+
+    .button__checkstatus::before {
+        content: 'Статус ремонта';
+        position: absolute;
+        top: 8px;
+        left: -135px;
+    } 
+}
+
+/* разделитель шапки */
+.site-header__divider {
+    width: 2px;
+    height: 32px;
+    border-radius: 1px;
+    margin-left: 16px;
+    margin-right: 16px;
+    background-color: #eaeaea;
+} 

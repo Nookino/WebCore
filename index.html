@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" media="(max-width: 767px)" href="mobile.css">
-        <link rel="stylesheet" media="(min-width: 768px) and (max-width: 1199.98px)" href="tablet.css">
-        <link rel="stylesheet" media="(min-width: 1200px)" href="pc.css"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="body.css">
+        <link rel="stylesheet" href="site-header.css">
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="main-navigation.css">
+        <link rel="stylesheet" href="info.css">
+        <link rel="stylesheet" href="brands.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
         <title>CPS Services</title>
     </head>
-    <body>
-        <header class="cite-header">
-            <button type="button" class="cite-header__button button__burger"></button>
-            <div class="cite-header__divider tablet-visible"></div> 
-            <img src="content/logo.svg" class="cite-header__logo cps__logo" alt="Логотип компании CPS">
-            <button type="button" class="cite-header__button button__call tablet-visible"></button>
-            <button type="button" class="cite-header__button button__chat tablet-visible"></button>
-            <button type="button" class="cite-header__button button__profile tablet-visible"></button>
-            <div class="cite-header__divider"></div> 
-            
-            <a class="cite-header__link">
-                <span class="pc-visible button__title">Оставить заявку</span>
-                <div class="cite-header__button button__repair"></div>
-            </a>
 
-            <a class="cite-header__link">
-                <span class="pc-visible button__title">Статус ремонта</span>
-                <div class="cite-header__button button__checkstatus"></div>
-            </a>
+    <body>
+
+        <header class="site-header">
+            <!-- <div class="container"> -->
+            <button type="button" class="site-header__button button__burger"></button>
+            <div class="site-header__divider tablet-visible"></div> 
+            <img src="content/logo.svg" class="site-header__logo cps__logo" alt="Логотип компании CPS">
+            <button type="button" class="site-header__button button__call tablet-visible"></button>
+            <button type="button" class="site-header__button button__chat tablet-visible"></button>
+            <button type="button" class="site-header__button button__profile tablet-visible"></button>
+            <div class="site-header__divider"></div> 
+            <button type="button" class="site-header__button button__repair button__title"></button>
+            <button type="button" class="site-header__button button__checkstatus button__title"></button>
+            <!-- </div> -->
         </header>
 
         <main>
@@ -44,7 +44,6 @@
             </nav>
             <div class="info">
                 <div class="info__text">
-                    <h2 class="info__title title"></h2>
                     <p class="text">
                         Мы являемся авторизованным сервисным центром по ремонту техники Dell.
                         Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
@@ -53,14 +52,112 @@
                         Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов.
                         Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
                     </p>
-                    <button class="info__more more__button"><div class="more__button-ic"></div><span class="button__title">Читать далее</span></button>
+                    <p class="text hidden" id="infoText">  
+                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов.
+                        Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                    </p>
+                    <button type="button" data-elem-id="infoText" class="info__more more__button more__button--show">Читать далее</button>
                 </div>
                 <div class="info__image">
                     <img src="content/_MG_3223.png" alt="Табличка CPS">
                 </div>
-                
+            </div>
+            <div class="brands">
+                <h2 class="brands__title title">Ремонт техники различных брендов</h2>
+                <div class="container pc-tablet-visible">
+                    <ul class="brandsList" id="brandsList">
+                    <li> 
+                            <a href="https://www.lenovo.com" target="_blank" class="brandsList__item">
+                            <img src="content/brands/lenovo.png" alt="Lenovo">
+                            </a>
+                    </li>
+                    <li>
+                            <a href="https://www.samsung.com" target="_blank" class="brandsList__item">
+                            <img src="content/brands/samsung.png" alt="samsung">
+                            </a>
+                    </li>
+                    <li>
+                            <a href="https://www.apple.com/" target="_blank" class="brandsList__item">
+                            <img src="content/brands/apple.png" alt="apple">
+                            </a>
+                    </li>
+                    <li> 
+                            <a href="https://www.viewsonic.com" target="_blank" class="brandsList__item">
+                            <img src="content/brands/ViewSonic.png" alt="ViewSonic">
+                            </a>
+                    </li>
+                    <li>
+                            <a href="https://www.bosch.com" target="_blank" class="brandsList__item">
+                            <img src="content/brands/bosch.png" alt="bosch">
+                            </a>
+                    </li>
+                    <li> 
+                            <a href="https://www.hp.com" target="_blank" class="brandsList__item">
+                            <img src="content/brands/hp.png" alt="hp">
+                            </a>
+                    </li>
+                    <li>
+                            <a href="https://www.acer.com" target="_blank" class="brandsList__item">
+                            <img src="content/brands/acer.png" alt="acer">
+                            </a>
+                    </li>
+                    <li>
+                            <a href="https://www.sony.com" target="_blank" class="brandsList__item">
+                            <img src="content/brands/sony.png" alt="sony">
+                            </a>
+                    </li> 
+                    <li class="hidden">
+                            <a href="https://www.lenovo.com" target="_blank" class="brandsList__item">
+                            <img src="content/brands/lenovo.png" alt="Lenovo">
+                            </a>
+                    </li>
+                    <li class="hidden">
+                            <a href="https://www.samsung.com" target="_blank" class="brandsList__item">
+                            <img src="content/brands/samsung.png" alt="samsung">
+                            </a>
+                    </li>
+                    <li class="hidden">
+                            <a href="https://www.apple.com/" target="_blank" class="brandsList__item">
+                            <img src="content/brands/apple.png" alt="apple">
+                            </a>
+                    </li>
+                    </ul>
+                </div>
+                <div class="container pc-tablet-visible">     
+                    <button type="button" data-elem-id="brandsList" class="brands__more more__button more__button--show">Показать всё</button>
+                </div>
+            </div>  
+            <div class="container mobile-visible">
+                <div class = "swiper brands-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide brands-slider__item">
+                            <a href="https://www.lenovo.com" target="_blank" class="brandsList__item">
+                            <img src="content/brands/lenovo.png" alt="Lenovo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide brands-slider__item">
+                            <a href="https://www.samsung.com" target="_blank" class="brandsList__item">
+                            <img src="content/brands/samsung.png" alt="samsung">
+                            </a>
+                        </div>
+                        <div class="swiper-slide brands-slider__item">
+                            <a href="https://www.apple.com/" target="_blank" class="brandsList__item">
+                            <img src="content/brands/apple.png" alt="apple">
+                            </a>
+                        </div>
+                        <div class="swiper-slide brands-slider__item">
+                            <a href="https://www.sony.com" target="_blank" class="brandsList__item">
+                            <img src="content/brands/sony.png" alt="sony">
+                            </a>
+                        </div>
+                    </div>  
+                    <div class="swiper-pagination"></div>     
+                </div>   
             </div>
         </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="more-button.js"></script>
+        <script src="swiper.js"></script>
         
     </body>
 </html>
